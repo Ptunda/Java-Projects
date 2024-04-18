@@ -10,7 +10,8 @@ public class ForLoop {
 
         for(int i = 0; i < 10; i++){
 
-            System.out.println(count - i + ".");
+            System.out.print("   "); // add a tab for readability
+            System.out.println(count - i);
             Thread.sleep(1000);
         }
 

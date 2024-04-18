@@ -1,6 +1,6 @@
 package com.pluralsight.bankApplication;
 
-// prevent the direct access internal attributes like accountNumber, ownerName, and routingNumber
+// prevent the direct access to internal attributes like accountNumber, ownerName, and routingNumber
 
 public class BankAccount {
 

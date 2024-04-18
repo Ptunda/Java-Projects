@@ -8,7 +8,7 @@ public class ForLoop {
 
         System.out.println("Count Down: ");
 
-        for(int i = 0; i <= 10; i++){
+        for(int i = 0; i < 10; i++){
 
             System.out.println(count - i + ".");
             Thread.sleep(1000);

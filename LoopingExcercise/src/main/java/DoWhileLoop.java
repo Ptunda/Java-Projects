@@ -9,7 +9,7 @@ public class DoWhileLoop {
         do {
 
             int numberOfTimes = i; // number of times you will be printing
-            System.out.println(numberOfTimes + ". I love Java.");
+            System.out.printf("%d. I love Java.\n", numberOfTimes);
             i++;
 
             // add wait period every time you execute

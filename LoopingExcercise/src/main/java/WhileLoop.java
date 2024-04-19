@@ -4,11 +4,14 @@ public class WhileLoop {
 
     public static void main(String[] args) throws InterruptedException {
 
-        // create a while loop that prints "I love Java" five times
         int i = 1;
 
+        System.out.println(); // creating an empty line/space when we print on the console pane
+
+        // create a while loop that prints "I love Java" five times
         while(i < 6){
 
+            System.out.print("   "); // adding a tab every time we print "I love Java."
             int numberOfTimes = i; // number of times you will be printing
             System.out.printf("%d. I love Java.\n", numberOfTimes);
             i++;

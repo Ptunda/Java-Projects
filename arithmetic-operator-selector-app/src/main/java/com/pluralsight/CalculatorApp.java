@@ -9,10 +9,9 @@ import java.util.Scanner;
 
 public class CalculatorApp {
 
+    static  Scanner myScanner = new Scanner(System.in);
+
     public static void main(String[] args) {
-
-
-        Scanner myScanner = new Scanner(System.in);
 
 
         // array of arithmetic operations
@@ -55,5 +54,33 @@ public class CalculatorApp {
 
         }
 
+
+        System.out.println("\n=============================================================================================\n");
+
+        // display the result
+        arithmeticOperation(operator);
+
     }
+
+    // method that performs actual arithmetic operation
+    public static void arithmeticOperation(char operator){
+
+        // prompt the user to enter numbers
+        System.out.print("Enter first number: ");
+        int firstNumber = myScanner.nextInt();
+
+        System.out.print("Enter second number: ");
+        int secondNumber = myScanner.nextInt();
+
+
+        // check suggested operator and compute the answer
+        int result = (operator == '+') ? firstNumber + secondNumber : (operator == '-') ? firstNumber - secondNumber : (operator == '*') ? firstNumber * secondNumber : (operator == '/') ? firstNumber / secondNumber : firstNumber % secondNumber;
+
+
+        // print the answer
+        System.out.println("The answer is: " + result);
+
+
+    }
+
 }

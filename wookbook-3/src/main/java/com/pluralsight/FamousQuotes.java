@@ -38,23 +38,30 @@ public class FamousQuotes {
             // a range of choices
             int high = 10, low = 1;
 
-
             // prompt the user to choose a financial quote they want to read
             System.out.print("Choose a financial quote you want to display. \n (select #1 - #10 or R for random quote) ");
-            int choice = myScanner.nextInt();
-            myScanner.nextLine();
+            String choice = myScanner.nextLine();
 
-            --choice; // reduce user-input value by 1, to fit the array length
+            if(choice.equalsIgnoreCase("R")) {
 
-            System.out.printf("Quote %d: %s\n", choice + 1, famousQuotes[choice]); // display chosen quote
+                int randomQuote = random.nextInt(high - low + 1) + low;
+                System.out.printf("Random Quote %d: %s\n", randomQuote, famousQuotes[randomQuote-1]);
 
-            myScanner.close();
+            }else {
+                int index = Integer.parseInt(choice) - 1;
+                if((index >=0) && index < famousQuotes.length){
+                    System.out.printf("Quote %d: %s\n", index + 1, famousQuotes[index]); // display chosen quote
+                }else {
+                    System.out.println("Invalid input. Please enter number between 1 & 10 inclusive");
+                }
+            }
 
 
         } catch(Exception e) {
 
             // if the user entered a very large number out of range, they should get an exception message
             System.out.println("Your number was out of range! " + e.getMessage());
+            myScanner.nextLine();
 
         }
 

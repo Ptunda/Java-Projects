@@ -10,12 +10,13 @@ public class FamousQuotes {
 
     public static void main(String[] args) {
 
-        financialQuotes(); // call the financial quotes method
+        financialQuotes(); // call the financialQuotes() method
 
-        seeMore(); //
+        seeMore(); // call the seeMore() method to ask the user to see more quotes
 
     }
 
+    // method that displays financial quotes
     public static void financialQuotes() {
 
         try{
@@ -57,6 +58,31 @@ public class FamousQuotes {
 
         }
 
+    }
+
+    // create a method that asks if the user wants to see more quotes
+    public static void seeMore() {
+
+        boolean infiniteLoop = true; // create an infinite to allow the user to have control over the program
+
+        while(infiniteLoop){
+
+            // asks the user if they want to see more quotes
+            System.out.print("Do you want to see more quotes (Y/N): ");
+            String response = myScanner.nextLine();
+
+            // if the user's response is yes, call the financial quotes method
+            if (response.equalsIgnoreCase("Y")){
+
+                financialQuotes();
+
+            } else {
+
+                System.out.println("See you, Potato!");
+                infiniteLoop = false;
+
+            }
+        }
     }
 
 

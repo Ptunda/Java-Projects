@@ -1,0 +1,2 @@
+Employee ID: 111, Name: Cameron Tay, Gross Pay: $3277.65
+Employee ID: 222, Name: James Tee, Gross Pay: $2150.0

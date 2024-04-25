@@ -1,6 +1,7 @@
 package com.pluralsight;
 
 import java.io.BufferedReader; // import the BufferReader class which reads text from a character-input stream
+import java.io.FileNotFoundException;
 import java.io.FileReader;  // import the FileReader class  which is used to read character files
 import java.io.IOException; // import the IOException class which is an exception class for input-output operations
 import java.util.Scanner; // import the Scanner class which is used to read input from the user
@@ -30,6 +31,13 @@ public class BedTimeStories {
 
                 lineNumber++; //  increment the lineNumber variable to prepare for the next line
             }
+
+        }
+
+        // catch block that catches the FileNotFoundException
+        catch(FileNotFoundException e){
+
+            System.out.println("FileNotFoundException " + e.getMessage());
         }
 
         // handle any IOException that may occur during file reading
